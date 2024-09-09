@@ -8,7 +8,6 @@ namespace PoC_Herencia_Polimorfismo.Clases
 {
     internal class Perro : Animal
     {
-        private List<string> Onomatopeyas { get; set; }
         public Perro()
         {
             Onomatopeyas = new List<string>
@@ -19,15 +18,12 @@ namespace PoC_Herencia_Polimorfismo.Clases
                 "auuuuuuuuuuuuuuu",
                 "grrrrrr"
             };
-        }
-        public override string EmitirOnomatopeya()
-        {
-            return Onomatopeyas[new Random().Next(0, Onomatopeyas.Count())];
+            quidSum = "Perritus";
         }
 
         public string EmitirOnomatopeya(string onomatopeya)
         {
-            return "Perritus dice: " + onomatopeya;
+            return quidSum + " dice que vos escribiste: " + onomatopeya;
         }
     }
 }

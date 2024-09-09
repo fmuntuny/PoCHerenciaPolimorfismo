@@ -64,7 +64,7 @@
             gboxPoliHerencia.Controls.Add(btnPerro);
             gboxPoliHerencia.Location = new Point(12, 12);
             gboxPoliHerencia.Name = "gboxPoliHerencia";
-            gboxPoliHerencia.Size = new Size(378, 151);
+            gboxPoliHerencia.Size = new Size(378, 155);
             gboxPoliHerencia.TabIndex = 5;
             gboxPoliHerencia.TabStop = false;
             gboxPoliHerencia.Text = "Polimorfismo de herencia";
@@ -113,6 +113,8 @@
             // 
             // gboxPoliSobrecarga
             // 
+            gboxPoliSobrecarga.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            gboxPoliSobrecarga.AutoSize = true;
             gboxPoliSobrecarga.Controls.Add(txtGato2);
             gboxPoliSobrecarga.Controls.Add(txtPerro2);
             gboxPoliSobrecarga.Controls.Add(label1);
@@ -122,7 +124,7 @@
             gboxPoliSobrecarga.Controls.Add(btnPerro2);
             gboxPoliSobrecarga.Location = new Point(396, 12);
             gboxPoliSobrecarga.Name = "gboxPoliSobrecarga";
-            gboxPoliSobrecarga.Size = new Size(461, 151);
+            gboxPoliSobrecarga.Size = new Size(769, 155);
             gboxPoliSobrecarga.TabIndex = 10;
             gboxPoliSobrecarga.TabStop = false;
             gboxPoliSobrecarga.Text = "Polimorfismo de sobrecarga";
@@ -152,9 +154,10 @@
             // 
             // lblGato2
             // 
+            lblGato2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblGato2.Location = new Point(207, 110);
             lblGato2.Name = "lblGato2";
-            lblGato2.Size = new Size(250, 23);
+            lblGato2.Size = new Size(556, 23);
             lblGato2.TabIndex = 8;
             // 
             // btnGato2
@@ -169,9 +172,10 @@
             // 
             // lblPerro2
             // 
+            lblPerro2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lblPerro2.Location = new Point(207, 80);
             lblPerro2.Name = "lblPerro2";
-            lblPerro2.Size = new Size(250, 23);
+            lblPerro2.Size = new Size(556, 23);
             lblPerro2.TabIndex = 6;
             // 
             // btnPerro2
@@ -252,7 +256,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1020, 527);
+            ClientSize = new Size(1174, 527);
             Controls.Add(groupBox1);
             Controls.Add(label2);
             Controls.Add(gboxPoliSobrecarga);
@@ -264,6 +268,7 @@
             gboxPoliSobrecarga.PerformLayout();
             groupBox1.ResumeLayout(false);
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

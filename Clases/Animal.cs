@@ -8,9 +8,11 @@ namespace PoC_Herencia_Polimorfismo.Clases
 {
     internal class Animal
     {
+        protected string quidSum { get; set; }
+        protected List<string> Onomatopeyas { get; set; }
         public virtual string EmitirOnomatopeya()
         {
-            return "Onomatopeya caracteristica de su especie.";
+            return Onomatopeyas[new Random().Next(0, Onomatopeyas.Count())];
         }
     }
 }

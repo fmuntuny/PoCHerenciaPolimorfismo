@@ -1,4 +1,5 @@
 using PoC_Herencia_Polimorfismo.Clases;
+using PoC_Herencia_Polimorfismo.Interfaces;
 
 namespace PoC_Herencia_Polimorfismo
 {
@@ -12,13 +13,27 @@ namespace PoC_Herencia_Polimorfismo
         private void button2_Click(object sender, EventArgs e)
         {
             Perro perro = new Perro();
-            lblPerro2.Text = perro.EmitirOnomatopeya(txtPerro2.Text);
+            if (string.IsNullOrEmpty(txtPerro2.Text))
+            {
+                lblPerro2.Text = perro.EmitirOnomatopeya();
+            }
+            else
+            {
+                lblPerro2.Text = perro.EmitirOnomatopeya(txtPerro2.Text);
+            }
         }
 
         private void btnGato2_Click(object sender, EventArgs e)
         {
             Gato gato = new Gato();
-            lblGato2.Text = gato.EmitirOnomatopeya(txtGato2.Text);
+            if (string.IsNullOrEmpty(txtGato2.Text))
+            {
+                lblGato2.Text = gato.EmitirOnomatopeya();
+            }
+            else
+            {
+                lblGato2.Text = gato.EmitirOnomatopeya(txtGato2.Text);
+            }
         }
 
         private void btnPerro_Click_1(object sender, EventArgs e)
@@ -35,7 +50,7 @@ namespace PoC_Herencia_Polimorfismo
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            PerroPorInterfaz perro = new PerroPorInterfaz();
+            IAnimal perro = new PerroPorInterfaz();
             lblPerro3.Text = perro.EmitirOnomatopeya();
         }
 
